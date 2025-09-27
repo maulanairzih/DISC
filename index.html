@@ -47,15 +47,18 @@
             body {
                 background: none;
                 font-family: 'Inter', sans-serif;
+                margin: 0;
             }
             .no-print {
                 display: none;
             }
             #mainSection {
                 box-shadow: none;
-                border: 1px solid #ccc;
+                border: none;
                 padding: 0;
                 margin: 0;
+                width: 100%;
+                max-width: 100%;
             }
             #resultsContainer {
                  display: block !important;
@@ -64,6 +67,9 @@
                 page-break-inside: avoid;
             }
             .charts-grid {
+                page-break-inside: avoid;
+            }
+            .print-table {
                 page-break-inside: avoid;
             }
         }
@@ -201,7 +207,31 @@
             'S-D-C': 'Sabar, terkontrol, dan suka menggali fakta. Tenang dan ramah, merencanakan pekerjaan dengan hati-hati tetapi agresif dalam mengumpulkan data. Seorang yang konsisten, suka menolong, dan berhubungan baik dengan hampir semua orang. Keterampilan interpersonal melebihi orientasi tugas.',
             'S-I-C': 'Orang yang stabil dan ramah yang berusaha membangun hubungan positif. Bisa sangat berorientasi detail jika situasi membutuhkan. Sekali membuat keputusan, sulit mengubah pendirian. Menyukai hubungan dengan orang dan cenderung mendukung pihak yang lemah. Cenderung moderat, cermat, dan dapat diandalkan.',
             'C-D-S': 'Berorientasi pada hal detail dan mempunyai standar tinggi untuk diri sendiri. Logis dan analitis, selalu berpikir ada ruang untuk perbaikan. Kompetitif dan ingin menghasilkan pekerjaan bermutu terbaik. Sensitif terhadap orang, tetapi sifat logis dapat menutupinya. Mantap dan dapat diandalkan.',
-            'C-I-S': 'Individu yang berorientasi pada orang, mampu menggabungkan ketepatan dan loyalitas. Peka dan mempunyai standar tinggi. Menginginkan stabilitas, pengakuan sosial, dan perhatian pribadi. Pencari fakta yang sangat baik dan akan membuat keputusan yang baik setelah mengumpulkan data.'
+            'C-I-S': 'Individu yang berorientasi pada orang, mampu menggabungkan ketepatan dan loyalitas. Peka dan mempunyai standar yang tinggi. Menginginkan stabilitas, pengakuan sosial, dan perhatian pribadi. Pencari fakta yang sangat baik dan akan membuat keputusan yang baik setelah mengumpulkan data.'
+            'D-I-S-C': 'Anda memiliki komposisi kepribadian yang sangat seimbang. Ini menunjukkan fleksibilitas yang luar biasa, di mana Anda dapat menampilkan setiap gaya perilaku (Dominance, Influence, Steadiness, Compliance) sesuai dengan tuntutan situasi. Kekuatan Anda adalah kemampuan adaptasi yang tinggi. Namun, tantangannya adalah kecenderungan untuk merasa ditarik ke berbagai arah yang berbeda, yang terkadang dapat menyebabkan keraguan atau kesulitan dalam mengambil keputusan yang tegas.',
+            'D-I-C-S': 'Anda memiliki komposisi kepribadian yang sangat seimbang. Ini menunjukkan fleksibilitas yang luar biasa, di mana Anda dapat menampilkan setiap gaya perilaku (Dominance, Influence, Steadiness, Compliance) sesuai dengan tuntutan situasi. Kekuatan Anda adalah kemampuan adaptasi yang tinggi. Namun, tantangannya adalah kecenderungan untuk merasa ditarik ke berbagai arah yang berbeda, yang terkadang dapat menyebabkan keraguan atau kesulitan dalam mengambil keputusan yang tegas.',
+            'D-S-I-C': 'Anda memiliki komposisi kepribadian yang sangat seimbang. Ini menunjukkan fleksibilitas yang luar biasa, di mana Anda dapat menampilkan setiap gaya perilaku (Dominance, Influence, Steadiness, Compliance) sesuai dengan tuntutan situasi. Kekuatan Anda adalah kemampuan adaptasi yang tinggi. Namun, tantangannya adalah kecenderungan untuk merasa ditarik ke berbagai arah yang berbeda, yang terkadang dapat menyebabkan keraguan atau kesulitan dalam mengambil keputusan yang tegas.',
+            'D-S-C-I': 'Anda memiliki komposisi kepribadian yang sangat seimbang. Ini menunjukkan fleksibilitas yang luar biasa, di mana Anda dapat menampilkan setiap gaya perilaku (Dominance, Influence, Steadiness, Compliance) sesuai dengan tuntutan situasi. Kekuatan Anda adalah kemampuan adaptasi yang tinggi. Namun, tantangannya adalah kecenderungan untuk merasa ditarik ke berbagai arah yang berbeda, yang terkadang dapat menyebabkan keraguan atau kesulitan dalam mengambil keputusan yang tegas.',
+            'D-C-I-S': 'Anda memiliki komposisi kepribadian yang sangat seimbang. Ini menunjukkan fleksibilitas yang luar biasa, di mana Anda dapat menampilkan setiap gaya perilaku (Dominance, Influence, Steadiness, Compliance) sesuai dengan tuntutan situasi. Kekuatan Anda adalah kemampuan adaptasi yang tinggi. Namun, tantangannya adalah kecenderungan untuk merasa ditarik ke berbagai arah yang berbeda, yang terkadang dapat menyebabkan keraguan atau kesulitan dalam mengambil keputusan yang tegas.',
+            'D-C-S-I': 'Anda memiliki komposisi kepribadian yang sangat seimbang. Ini menunjukkan fleksibilitas yang luar biasa, di mana Anda dapat menampilkan setiap gaya perilaku (Dominance, Influence, Steadiness, Compliance) sesuai dengan tuntutan situasi. Kekuatan Anda adalah kemampuan adaptasi yang tinggi. Namun, tantangannya adalah kecenderungan untuk merasa ditarik ke berbagai arah yang berbeda, yang terkadang dapat menyebabkan keraguan atau kesulitan dalam mengambil keputusan yang tegas.',
+            'I-D-S-C': 'Anda memiliki komposisi kepribadian yang sangat seimbang. Ini menunjukkan fleksibilitas yang luar biasa, di mana Anda dapat menampilkan setiap gaya perilaku (Dominance, Influence, Steadiness, Compliance) sesuai dengan tuntutan situasi. Kekuatan Anda adalah kemampuan adaptasi yang tinggi. Namun, tantangannya adalah kecenderungan untuk merasa ditarik ke berbagai arah yang berbeda, yang terkadang dapat menyebabkan keraguan atau kesulitan dalam mengambil keputusan yang tegas.',
+            'I-D-C-S': 'Anda memiliki komposisi kepribadian yang sangat seimbang. Ini menunjukkan fleksibilitas yang luar biasa, di mana Anda dapat menampilkan setiap gaya perilaku (Dominance, Influence, Steadiness, Compliance) sesuai dengan tuntutan situasi. Kekuatan Anda adalah kemampuan adaptasi yang tinggi. Namun, tantangannya adalah kecenderungan untuk merasa ditarik ke berbagai arah yang berbeda, yang terkadang dapat menyebabkan keraguan atau kesulitan dalam mengambil keputusan yang tegas.',
+            'I-S-D-C': 'Anda memiliki komposisi kepribadian yang sangat seimbang. Ini menunjukkan fleksibilitas yang luar biasa, di mana Anda dapat menampilkan setiap gaya perilaku (Dominance, Influence, Steadiness, Compliance) sesuai dengan tuntutan situasi. Kekuatan Anda adalah kemampuan adaptasi yang tinggi. Namun, tantangannya adalah kecenderungan untuk merasa ditarik ke berbagai arah yang berbeda, yang terkadang dapat menyebabkan keraguan atau kesulitan dalam mengambil keputusan yang tegas.',
+            'I-S-C-D': 'Anda memiliki komposisi kepribadian yang sangat seimbang. Ini menunjukkan fleksibilitas yang luar biasa, di mana Anda dapat menampilkan setiap gaya perilaku (Dominance, Influence, Steadiness, Compliance) sesuai dengan tuntutan situasi. Kekuatan Anda adalah kemampuan adaptasi yang tinggi. Namun, tantangannya adalah kecenderungan untuk merasa ditarik ke berbagai arah yang berbeda, yang terkadang dapat menyebabkan keraguan atau kesulitan dalam mengambil keputusan yang tegas.',
+            'I-C-D-S': 'Anda memiliki komposisi kepribadian yang sangat seimbang. Ini menunjukkan fleksibilitas yang luar biasa, di mana Anda dapat menampilkan setiap gaya perilaku (Dominance, Influence, Steadiness, Compliance) sesuai dengan tuntutan situasi. Kekuatan Anda adalah kemampuan adaptasi yang tinggi. Namun, tantangannya adalah kecenderungan untuk merasa ditarik ke berbagai arah yang berbeda, yang terkadang dapat menyebabkan keraguan atau kesulitan dalam mengambil keputusan yang tegas.',
+            'I-C-S-D': 'Anda memiliki komposisi kepribadian yang sangat seimbang. Ini menunjukkan fleksibilitas yang luar biasa, di mana Anda dapat menampilkan setiap gaya perilaku (Dominance, Influence, Steadiness, Compliance) sesuai dengan tuntutan situasi. Kekuatan Anda adalah kemampuan adaptasi yang tinggi. Namun, tantangannya adalah kecenderungan untuk merasa ditarik ke berbagai arah yang berbeda, yang terkadang dapat menyebabkan keraguan atau kesulitan dalam mengambil keputusan yang tegas.',
+            'S-D-I-C': 'Anda memiliki komposisi kepribadian yang sangat seimbang. Ini menunjukkan fleksibilitas yang luar biasa, di mana Anda dapat menampilkan setiap gaya perilaku (Dominance, Influence, Steadiness, Compliance) sesuai dengan tuntutan situasi. Kekuatan Anda adalah kemampuan adaptasi yang tinggi. Namun, tantangannya adalah kecenderungan untuk merasa ditarik ke berbagai arah yang berbeda, yang terkadang dapat menyebabkan keraguan atau kesulitan dalam mengambil keputusan yang tegas.',
+            'S-D-C-I': 'Anda memiliki komposisi kepribadian yang sangat seimbang. Ini menunjukkan fleksibilitas yang luar biasa, di mana Anda dapat menampilkan setiap gaya perilaku (Dominance, Influence, Steadiness, Compliance) sesuai dengan tuntutan situasi. Kekuatan Anda adalah kemampuan adaptasi yang tinggi. Namun, tantangannya adalah kecenderungan untuk merasa ditarik ke berbagai arah yang berbeda, yang terkadang dapat menyebabkan keraguan atau kesulitan dalam mengambil keputusan yang tegas.',
+            'S-I-D-C': 'Anda memiliki komposisi kepribadian yang sangat seimbang. Ini menunjukkan fleksibilitas yang luar biasa, di mana Anda dapat menampilkan setiap gaya perilaku (Dominance, Influence, Steadiness, Compliance) sesuai dengan tuntutan situasi. Kekuatan Anda adalah kemampuan adaptasi yang tinggi. Namun, tantangannya adalah kecenderungan untuk merasa ditarik ke berbagai arah yang berbeda, yang terkadang dapat menyebabkan keraguan atau kesulitan dalam mengambil keputusan yang tegas.',
+            'S-I-C-D': 'Anda memiliki komposisi kepribadian yang sangat seimbang. Ini menunjukkan fleksibilitas yang luar biasa, di mana Anda dapat menampilkan setiap gaya perilaku (Dominance, Influence, Steadiness, Compliance) sesuai dengan tuntutan situasi. Kekuatan Anda adalah kemampuan adaptasi yang tinggi. Namun, tantangannya adalah kecenderungan untuk merasa ditarik ke berbagai arah yang berbeda, yang terkadang dapat menyebabkan keraguan atau kesulitan dalam mengambil keputusan yang tegas.',
+            'S-C-D-I': 'Anda memiliki komposisi kepribadian yang sangat seimbang. Ini menunjukkan fleksibilitas yang luar biasa, di mana Anda dapat menampilkan setiap gaya perilaku (Dominance, Influence, Steadiness, Compliance) sesuai dengan tuntutan situasi. Kekuatan Anda adalah kemampuan adaptasi yang tinggi. Namun, tantangannya adalah kecenderungan untuk merasa ditarik ke berbagai arah yang berbeda, yang terkadang dapat menyebabkan keraguan atau kesulitan dalam mengambil keputusan yang tegas.',
+            'S-C-I-D': 'Anda memiliki komposisi kepribadian yang sangat seimbang. Ini menunjukkan fleksibilitas yang luar biasa, di mana Anda dapat menampilkan setiap gaya perilaku (Dominance, Influence, Steadiness, Compliance) sesuai dengan tuntutan situasi. Kekuatan Anda adalah kemampuan adaptasi yang tinggi. Namun, tantangannya adalah kecenderungan untuk merasa ditarik ke berbagai arah yang berbeda, yang terkadang dapat menyebabkan keraguan atau kesulitan dalam mengambil keputusan yang tegas.',
+            'C-D-I-S': 'Anda memiliki komposisi kepribadian yang sangat seimbang. Ini menunjukkan fleksibilitas yang luar biasa, di mana Anda dapat menampilkan setiap gaya perilaku (Dominance, Influence, Steadiness, Compliance) sesuai dengan tuntutan situasi. Kekuatan Anda adalah kemampuan adaptasi yang tinggi. Namun, tantangannya adalah kecenderungan untuk merasa ditarik ke berbagai arah yang berbeda, yang terkadang dapat menyebabkan keraguan atau kesulitan dalam mengambil keputusan yang tegas.',
+            'C-D-S-I': 'Anda memiliki komposisi kepribadian yang sangat seimbang. Ini menunjukkan fleksibilitas yang luar biasa, di mana Anda dapat menampilkan setiap gaya perilaku (Dominance, Influence, Steadiness, Compliance) sesuai dengan tuntutan situasi. Kekuatan Anda adalah kemampuan adaptasi yang tinggi. Namun, tantangannya adalah kecenderungan untuk merasa ditarik ke berbagai arah yang berbeda, yang terkadang dapat menyebabkan keraguan atau kesulitan dalam mengambil keputusan yang tegas.',
+            'C-I-D-S': 'Anda memiliki komposisi kepribadian yang sangat seimbang. Ini menunjukkan fleksibilitas yang luar biasa, di mana Anda dapat menampilkan setiap gaya perilaku (Dominance, Influence, Steadiness, Compliance) sesuai dengan tuntutan situasi. Kekuatan Anda adalah kemampuan adaptasi yang tinggi. Namun, tantangannya adalah kecenderungan untuk merasa ditarik ke berbagai arah yang berbeda, yang terkadang dapat menyebabkan keraguan atau kesulitan dalam mengambil keputusan yang tegas.',
+            'C-I-S-D': 'Anda memiliki komposisi kepribadian yang sangat seimbang. Ini menunjukkan fleksibilitas yang luar biasa, di mana Anda dapat menampilkan setiap gaya perilaku (Dominance, Influence, Steadiness, Compliance) sesuai dengan tuntutan situasi. Kekuatan Anda adalah kemampuan adaptasi yang tinggi. Namun, tantangannya adalah kecenderungan untuk merasa ditarik ke berbagai arah yang berbeda, yang terkadang dapat menyebabkan keraguan atau kesulitan dalam mengambil keputusan yang tegas.',
+            'C-S-D-I': 'Anda memiliki komposisi kepribadian yang sangat seimbang. Ini menunjukkan fleksibilitas yang luar biasa, di mana Anda dapat menampilkan setiap gaya perilaku (Dominance, Influence, Steadiness, Compliance) sesuai dengan tuntutan situasi. Kekuatan Anda adalah kemampuan adaptasi yang tinggi. Namun, tantangannya adalah kecenderungan untuk merasa ditarik ke berbagai arah yang berbeda, yang terkadang dapat menyebabkan keraguan atau kesulitan dalam mengambil keputusan yang tegas.',
+            'C-S-I-D': 'Anda memiliki komposisi kepribadian yang sangat seimbang. Ini menunjukkan fleksibilitas yang luar biasa, di mana Anda dapat menampilkan setiap gaya perilaku (Dominance, Influence, Steadiness, Compliance) sesuai dengan tuntutan situasi. Kekuatan Anda adalah kemampuan adaptasi yang tinggi. Namun, tantangannya adalah kecenderungan untuk merasa ditarik ke berbagai arah yang berbeda, yang terkadang dapat menyebabkan keraguan atau kesulitan dalam mengambil keputusan yang tegas.',
         };
 
         let currentUser = {};
@@ -382,7 +412,7 @@
             return analysisHTML;
         };
 
-        function renderResultsPage({ user, naturalProfile, adaptedProfile, percentages, date }) {
+        function renderResultsPage({ user, naturalProfile, adaptedProfile, percentages, date, rawScores }) {
             const container = document.getElementById('interpretationContainer');
             document.getElementById('reportUserName').textContent = user.name;
             document.getElementById('reportDate').textContent = `Tanggal Asesmen: ${date}`;
@@ -405,6 +435,33 @@
                 <div class="grid md:grid-cols-2 gap-8 mt-8 charts-grid">
                     <div class="bg-white p-4 rounded-xl shadow-md"><h3 class="text-xl font-bold text-center text-gray-800 mb-4">Grafik Garis</h3><canvas id="lineChart"></canvas></div>
                     <div class="bg-white p-4 rounded-xl shadow-md"><h3 class="text-xl font-bold text-center text-gray-800 mb-4">Grafik Radar</h3><canvas id="radarChart"></canvas></div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md mt-8 print-table">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Rincian Skor</h3>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm text-center">
+                            <thead class="bg-gray-100">
+                                <tr>
+                                    <th class="p-3 font-semibold text-gray-700">Aspek</th>
+                                    <th class="p-3 font-semibold text-gray-700">Skor Mentah (Adaptasi)</th>
+                                    <th class="p-3 font-semibold text-gray-700">Persentase (Adaptasi)</th>
+                                    <th class="p-3 font-semibold text-gray-700">Skor Mentah (Natural)</th>
+                                    <th class="p-3 font-semibold text-gray-700">Persentase (Natural)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${['D', 'I', 'S', 'C'].map(style => `
+                                <tr class="border-t">
+                                    <td class="p-3 font-bold">${style}</td>
+                                    <td class="p-3">${rawScores.M[style]}</td>
+                                    <td class="p-3">${percentages.M[style]}%</td>
+                                    <td class="p-3">${rawScores.J[style]}</td>
+                                    <td class="p-3">${percentages.J[style]}%</td>
+                                </tr>
+                                `).join('')}
+                            </tbody>
+                        </table>
+                    </div>
                 </div>`;
 
             if(chartInstances.line) chartInstances.line.destroy();
